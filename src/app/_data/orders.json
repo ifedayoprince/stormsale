@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Marcus Bergson",
+        "date": "2024-01-26T03:52:16.778Z",
+        "amount": 8000,
+        "status": "paid",
+        "platform": "Book Bazaar"
+    },
+    {
+        "name": "Luke Matthew",
+        "date": "2024-02-26T03:52:16.778Z",
+        "amount": 3200,
+        "status": "paid",
+        "platform": "Book Bazaar"
+    },
+    {
+        "name": "Lara Acosta",
+        "date": "2024-02-26T03:52:16.778Z",
+        "amount": 800,
+        "status": "paid",
+        "platform": "Book Bazaar"
+    }
+]

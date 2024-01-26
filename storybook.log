@@ -1,0 +1,118 @@
+ WARN  GET https://registry.npmjs.org/@storybook%2Freact error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@storybook%2Fnextjs error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@storybook%2Faddon-links error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@storybook%2Faddon-essentials error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@storybook%2Fblocks error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@storybook%2Faddon-interactions error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@storybook%2Ftest error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/eslint-plugin-storybook error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 9, reused 8, downloaded 0, added 0
+Progress: resolved 14, reused 14, downloaded 0, added 0
+Progress: resolved 14, reused 15, downloaded 0, added 0
+Progress: resolved 15, reused 15, downloaded 0, added 0
+ WARN  GET https://registry.npmjs.org/@storybook%2Freact error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@storybook%2Fnextjs error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@storybook%2Faddon-links error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@storybook%2Faddon-essentials error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@storybook%2Fblocks error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@storybook%2Faddon-interactions error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@storybook%2Ftest error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/eslint-plugin-storybook error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/@storybook%2Ftest: request to https://registry.npmjs.org/@storybook%2Ftest failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+Progress: resolved 16, reused 15, downloaded 0, added 0
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/@storybook%2Fnextjs: request to https://registry.npmjs.org/@storybook%2Fnextjs failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/eslint-plugin-storybook: request to https://registry.npmjs.org/eslint-plugin-storybook failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/@storybook%2Fblocks: request to https://registry.npmjs.org/@storybook%2Fblocks failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/@storybook%2Faddon-interactions: request to https://registry.npmjs.org/@storybook%2Faddon-interactions failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/@storybook%2Faddon-essentials: request to https://registry.npmjs.org/@storybook%2Faddon-essentials failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/@storybook%2Faddon-links: request to https://registry.npmjs.org/@storybook%2Faddon-links failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/@storybook%2Freact: request to https://registry.npmjs.org/@storybook%2Freact failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ WARN  GET https://registry.npmjs.org/@storybook%2Fglobal error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@types%2Fescodegen error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@types%2Festree error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@types%2Fnode error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/acorn error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/acorn-jsx error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/acorn-walk error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/escodegen error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/html-tags error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/lodash error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/prop-types error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/react-element-to-jsx-string error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/ts-dedent error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/type-fest error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/util-deprecate error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fcore error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+Progress: resolved 79, reused 73, downloaded 0, added 0
+Progress: resolved 170, reused 170, downloaded 0, added 0
+Progress: resolved 316, reused 316, downloaded 0, added 0
+Progress: resolved 347, reused 347, downloaded 0, added 0
+ WARN  GET https://registry.npmjs.org/@storybook%2Fglobal error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@types%2Fescodegen error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@types%2Festree error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@types%2Fnode error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/acorn error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/acorn-jsx error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/acorn-walk error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/escodegen error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/html-tags error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/lodash error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/prop-types error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/react-element-to-jsx-string error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/ts-dedent error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/type-fest error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/util-deprecate error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fcore error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/@types%2Fescodegen: request to https://registry.npmjs.org/@types%2Fescodegen failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+Progress: resolved 348, reused 347, downloaded 0, added 0
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/@storybook%2Fglobal: request to https://registry.npmjs.org/@storybook%2Fglobal failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/@types%2Festree: request to https://registry.npmjs.org/@types%2Festree failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/acorn-walk: request to https://registry.npmjs.org/acorn-walk failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/acorn-jsx: request to https://registry.npmjs.org/acorn-jsx failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ WARN  GET https://registry.npmjs.org/@storybook/cli/-/cli-7.6.10.tgz error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-syntax-bigint error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/acorn: request to https://registry.npmjs.org/acorn failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-syntax-dynamic-import error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-syntax-import-assertions error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-transform-class-properties error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/html-tags: request to https://registry.npmjs.org/html-tags failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/lodash: request to https://registry.npmjs.org/lodash failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/escodegen: request to https://registry.npmjs.org/escodegen failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-transform-export-namespace-from error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-transform-numeric-separator error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-transform-object-rest-spread error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-transform-runtime error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/@types%2Fnode: request to https://registry.npmjs.org/@types%2Fnode failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ WARN  GET https://registry.npmjs.org/@babel%2Fpreset-env error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/prop-types: request to https://registry.npmjs.org/prop-types failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ WARN  GET https://registry.npmjs.org/@babel%2Fpreset-react error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/react-element-to-jsx-string: request to https://registry.npmjs.org/react-element-to-jsx-string failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/ts-dedent: request to https://registry.npmjs.org/ts-dedent failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/type-fest: request to https://registry.npmjs.org/type-fest failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/util-deprecate: request to https://registry.npmjs.org/util-deprecate failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ WARN  GET https://registry.npmjs.org/@babel%2Fpreset-typescript error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fruntime error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmjs.org/@babel%2Fcore: request to https://registry.npmjs.org/@babel%2Fcore failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+ WARN  GET https://registry.npmjs.org/@types%2Fnode error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@types%2Fsemver error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+Progress: resolved 366, reused 365, downloaded 0, added 0
+ WARN  GET https://registry.npmjs.org/css-loader error (ENOTFOUND). Will retry in 10 seconds. 2 retries left.
+Progress: resolved 366, reused 366, downloaded 0, added 0
+ WARN  GET https://registry.npmjs.org/@storybook/cli/-/cli-7.6.10.tgz error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-syntax-bigint error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-syntax-dynamic-import error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-syntax-import-assertions error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-transform-class-properties error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-transform-export-namespace-from error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-transform-numeric-separator error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-transform-object-rest-spread error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fplugin-transform-runtime error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fpreset-env error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fpreset-react error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fpreset-typescript error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@babel%2Fruntime error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@types%2Fnode error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/@types%2Fsemver error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmjs.org/css-loader error (ENOTFOUND). Will retry in 1 minute. 1 retries left.
+Terminate batch job (Y/N)? 
