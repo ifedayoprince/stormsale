@@ -1,19 +1,12 @@
 import type { Config as TWConfig } from 'tailwindcss'
-import type {Config as RConfig} from 'rippleui'
+import type { Config as RConfig } from 'rippleui'
 
 const rippleConfig: RConfig = {
-  removeThemes: ["dark"],
-  themes: [
-    {
-      themeName: "light",
-      colorScheme: "light",
-      prefersColorScheme: true,
-    },
-  ],
 }
 
 
 const config: TWConfig = {
+  darkMode: "class",
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -22,7 +15,7 @@ const config: TWConfig = {
   theme: {
     extend: {
       borderColor: {
-        "DEFAULT": "#a3a3a3"
+        "DEFAULT": "#EBECF2"
       },
       borderWidth: {
         "DEFAULT": "1px",
@@ -31,9 +24,17 @@ const config: TWConfig = {
       colors: {
         'primary-green': "#34CAA5",
         secondaryBlue: "#0D062D",
+        "blue": {
+          "primary": "#3A3F51"
+        },
+        "border": "#EDF2F7",
         darkGray: "#212121",
-        smoke: "#E0E0E0",
+        smoke: {
+          "DEFAULT": "#E0E0E0",
+          "border": "#DADDDD"
+        },
         'mid-green': "#f7f8fa",
+        "background": "#EDF0F4",
         neutral: {
           '50': "#fafafa",
           '100': "#f5f5f5",
@@ -46,7 +47,13 @@ const config: TWConfig = {
           '800': "#262626",
           '900': "#171717"
         },
+        "text": {
+          "dark": "#26282C",
+          "subtitle": "#787486",
+          "table": "#9CA4AB"
+        },
         'new-red': "#BB372F",
+        "alert-red": "#ED544E",
       },
       gridTemplateAreas: {
         'profile-action-chip': [
