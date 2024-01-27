@@ -19,3 +19,49 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+@keyframes ping-2 {
+  75%, 100% {
+      transform: scale(1.5);
+      opacity: 0.8;
+  }
+}
+.ping-animate {
+  animation: ping-2 500ms cubic-bezier(0, 0, 0.2, 1) infinite alternate-reverse;
+}
+
+.chart-tip {
+  display: none;
+}
+.chart-tip div {
+  background: #090C2C !important;
+  border: none !important;
+}
+
+.bg-mid-green {
+  @apply dark:bg-neutral-700 
+}
+.bg-background {
+  @apply dark:bg-neutral-800
+}
+
+div.Toastify__toast.toast-message {
+  @apply bg-neutral-700 w-[80vw] md:max-w-max text-white rounded-lg border-2 border-neutral-600 mt-4 ml-4;
+}
+
+html > body {
+  font-family: var(--font-jak);
+}
+
+.text2 {
+  font-family: var(--font-manrope);
+}
+.btn {
+  @apply hover:bg-neutral-300 dark:hover:bg-neutral-500 text-black dark:text-white
+}
+.input {
+  @apply bg-white dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300
+}
+.select {
+  @apply bg-white dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200
+}

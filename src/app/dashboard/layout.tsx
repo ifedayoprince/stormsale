@@ -3,11 +3,14 @@ import { Inter, Manrope, Plus_Jakarta_Sans } from 'next/font/google'
 import './../globals.css';
 import { Sidebar } from './Sidebar'
 import { ReactNode } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
-
-const inter = Inter({ subsets: ['latin'] })
-// const manrope = Manrope({ subsets: ['latin'] })
-// const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] })
+const manrope = Manrope({ subsets: ['latin'],
+variable: "--font-manrope", })
+const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'],
+variable: "--font-jak", });
 
 export const metadata: Metadata = {
   title: 'StormSale Analytics',
@@ -20,12 +23,16 @@ export default function RootLayout({
 }: {
   children: ReactNode
 }) {
+
   return (
-    <main className='flex w-full bg-neutral-100 text-black bg-[url(/dashboard.sv)] [background-size:100%] h-screen overflow-hidden'>
+    <main className={`${manrope.variable} ${jakarta.variable} flex w-full bg-background text-black bg-[url(/dashboard.sv)] [background-size:100%] h-screen overflow-hidden`}>
       <Sidebar />
       <div className='w-full h-full overflow-y-scroll'>
         {children}
       </div>
+      <ToastContainer 
+      position='top-left'
+      toastClassName={'toast-message'}/>
     </main>
   )
 }

@@ -2,6 +2,10 @@ import { ChartData, ChartOptions } from "chart.js";
 import { EChartsOption } from "echarts";
 import EChartsReact from "echarts-for-react";
 import * as echarts from 'echarts/core'
+import { formatThousand } from "../utils/format";
+
+import OrderData from '@/app/_data/orders.json';
+import { listByMonth, toOrderArray } from "../_models/Order";
 
 const data = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -12,25 +16,33 @@ const data = {
 const option = {
     tooltip: {
         position: 'top',
+        className: "!bg-[#090C2C] !px-3 !py-2 !border-none !text-white chart-tip",
         formatter: function (params: any) {
-            return `<div>$${params.value}</div>`;
+            return `<div>$${formatThousand(params.value)}</div>`;
         },
     },
     xAxis: {
         type: 'category',
         data: data.labels,
+        axisLabel: {
+            color: "#b2abab"
+        }
     },
     yAxis: {
         type: 'value',
+        axisLabel: {
+            color: "#b2abab"
+        },
         splitLine: {
             lineStyle: {
                 type: 'dotted',
-                width: 2
+                width: 2,
+                color: "#a3a3a3"
             }
         },
     },
     grid: {
-        left: 50,
+        left: 40,
         right: 0,
         top: 20,
         bottom: 20,
@@ -41,28 +53,18 @@ const option = {
             type: 'bar',
             data: data.sales,
             itemStyle: {
-                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                    {
-                        offset: 0,
-                        color: '#07dfb1',
-                    },
-                    {
-                        offset: 1,
-                        color: '#20f08b',
-                    },
-                ]),
+                color: "#34CAA51A",
                 barBorderRadius: [20, 20, 0, 0],
-                opacity: 0.2,
                 emphasis: {
                     opacity: 1,
                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                         {
                             offset: 0,
-                            color: '#07dfb1',
+                            color: '#34CAA5',
                         },
                         {
                             offset: 1,
-                            color: '#20f08b00',
+                            color: '#34CAA500',
                         },
                     ]),
                 }
@@ -72,7 +74,13 @@ const option = {
 };
 
 export const SalesChart = () => {
+    let data = listByMonth(toOrderArray(OrderData));
+    let sales = data.map((month) => month.length == 0
+        ? 0
+        : month.reduce((a, b) => ({ ...a, amount: a.amount + b.amount })).amount)
+    option.series[0].data = sales;
+
     return (
-        <EChartsReact option={option} className="w-ful" style={{ width: "100%", height: "100%" }} />
+        <EChartsReact option={option} className="w-full" style={{ width: "100%", height: "100%" }} />
     )
 }
