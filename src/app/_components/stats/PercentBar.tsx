@@ -12,7 +12,7 @@ export const PercentBar: React.FC<PercentBarProps> = ({ title, data, rank,max })
     return (
         <div className="w-full flex flex-col gap-2">
             <h3 className="text-dark dark:text-neutral-200">{title}</h3>
-            <progress className={`progress w-full ${rank == 1
+            <progress className={`progress [&::-webkit-progress-bar]:bg-neutral-200 dark:[&::-webkit-progress-bar]:bg-neutral-800 w-full ${rank == 1
                 ? "[&::-webkit-progress-value]:bg-[#6160DC]"
                 : rank == 2
                     ? "[&::-webkit-progress-value]:bg-[#54C5EB]"

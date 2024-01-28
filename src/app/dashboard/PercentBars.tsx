@@ -36,7 +36,7 @@ export const PercentBars = () => {
 
     console.log(formatData)
     return (
-        <Card title="Top Platform" className="grid-in-platform max-h-min pb-4 md:pb-0">
+        <Card title="Top Platform" className="grid-in-platform h-min pb-4">
             <div className="flex flex-col gap-3 w-full">
                 {
                     formatData.map((bar)=>{

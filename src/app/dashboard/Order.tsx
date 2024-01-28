@@ -2,6 +2,7 @@ import { DocumentDownload } from "iconsax-react";
 import { OrderStruct } from "../_models/Order";
 import { formatNumber } from "chart.js/helpers";
 import { formatThousand } from "../utils/format";
+import Image from "next/image";
 
 export enum OrderStatus {
     PAID = "paid",
@@ -18,6 +19,12 @@ export const Order: React.FC<OrderProps> = ({ order }) => {
             <td>
                 <div className="flex items-center gap-2">
                     <div className="avatar avatar-sm">
+                        <Image 
+                        src={order.avatar}
+                        alt={"user avatar"}
+                        width={100}
+                        height={100}
+                        className="" />
                     </div>
                     <p className="text-blue-primary dark:text-white">{order.name}</p>
                 </div>

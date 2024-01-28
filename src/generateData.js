@@ -13,7 +13,8 @@ for (let i = 0; i < entries; i++) {
         date: faker.date.anytime().toISOString(),
         status: stats[Math.floor(Math.random() * stats.length)],
         platform: platform[Math.floor(Math.random() * platform.length)],
+        avatar: `https://i.pravatar.cc/500?img=${Math.floor(Math.random() * 70)}`
     })
 }
 
-fs.writeFile("out.json", JSON.stringify(out), ()=>{})
+fs.writeFile("app/_data/orders.json", JSON.stringify(out), ()=>{})

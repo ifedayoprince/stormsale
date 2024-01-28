@@ -6,6 +6,7 @@ export interface OrderStruct {
     amount: number,
     status: OrderStatus;
     platform: string;
+    avatar: string;
 }
 
 export interface OrderJSON {
@@ -18,9 +19,9 @@ export interface OrderJSON {
 
 export function toOrderArray(orderJson: OrderJSON[]): OrderStruct[] {
     return orderJson.map(({ name, amount, status, platform, date }) => ({
-        name, amount, platform,
+        name, amount, platform, avatar,
         date: new Date(date),
-        status: status as OrderStatus
+        status: status as OrderStatus,
     }))
 }
 
