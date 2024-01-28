@@ -152,10 +152,10 @@ const TopNav = () => (
             <div className="dropdown">
                 <ProfileBtn />
                 <div className="dropdown-menu bg-mid-green text-black dark:text-neutral-100">
-                    <Link href={"#"} className="dropdown-item text-sm hover:bg-neutral-200 dark:hover::bg-neutral-600">Account Settings</Link>
-                    <Link href={"#"} className="dropdown-item text-sm hover:bg-neutral-200 dark:hover::bg-neutral-600">Connected Accounts</Link>
-                    <Link href={"#"} className="dropdown-item text-sm hover:bg-neutral-200 dark:hover::bg-neutral-600">Help & Support</Link>
-                    <Link href={"#"} className="dropdown-item text-sm hover:bg-neutral-200 dark:hover::bg-neutral-600">Data Privacy</Link>
+                    <Link href={"#"} className="dropdown-item text-sm hover:bg-neutral-200 dark:hover:bg-neutral-600">Account Settings</Link>
+                    <Link href={"#"} className="dropdown-item text-sm hover:bg-neutral-200 dark:hover:bg-neutral-600">Connected Accounts</Link>
+                    <Link href={"#"} className="dropdown-item text-sm hover:bg-neutral-200 dark:hover:bg-neutral-600">Help & Support</Link>
+                    <Link href={"#"} className="dropdown-item text-sm hover:bg-neutral-200 dark:hover:bg-neutral-600">Data Privacy</Link>
                 </div>
             </div>
         </div>
