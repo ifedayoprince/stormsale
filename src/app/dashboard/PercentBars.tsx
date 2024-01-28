@@ -27,6 +27,13 @@ export const PercentBars = () => {
     }
     // [ { name: 'Book Bazaar', value: 3, rank: 1 } ]
     let formatData = rankObjects(allPlatforms)
+    let max = 0;
+
+    formatData.forEach(({value})=> {
+        let v = value as number;
+        if (v > max) max = v
+    })
+
     console.log(formatData)
     return (
         <Card title="Top Platform" className="grid-in-platform max-h-min pb-4 md:pb-0">
@@ -35,7 +42,9 @@ export const PercentBars = () => {
                     formatData.map((bar)=>{
                         return <PercentBar 
                         title={bar.name} 
-                        data={bar.value as number} rank={bar.rank}                        />
+                        data={bar.value as number} rank={bar.rank}
+                        max={max}
+                         />
                     })
                 }
             </div>
