@@ -15,10 +15,11 @@ export interface OrderJSON {
     amount: number,
     status: string;
     platform: string;
+    avatar: string;
 }
 
 export function toOrderArray(orderJson: OrderJSON[]): OrderStruct[] {
-    return orderJson.map(({ name, amount, status, platform, date }) => ({
+    return orderJson.map(({ name, amount, status, platform, date , avatar}) => ({
         name, amount, platform, avatar,
         date: new Date(date),
         status: status as OrderStatus,

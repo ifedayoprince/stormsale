@@ -1,31 +1,35 @@
 'use client'
 
 
-import { ArrowDown2, Calendar, HambergerMenu, Menu, Moon, Notification, People, SearchNormal1, Sun, Sun1, User } from "iconsax-react";
+import { ArrowDown2, Calendar, HambergerMenu, Moon, Notification, SearchNormal1, Sun1 } from "iconsax-react";
 import Image from "next/image";
 import { StatCards } from "./StatCards";
 import { Card } from "../_components/Card";
 import { PercentBars } from "./PercentBars";
-import { Order, OrderStatus } from "./Order";
+import { Order } from "./Order";
 
 import OrderData from './../_data/orders.json';
-import { toOrderArray } from "../_models/Order";
+import { OrderJSON, toOrderArray } from "../_models/Order";
 
 import Metadata from './../_data/metadata.json';
 import Link from "next/link";
-import { BarElement, CategoryScale, Chart, LineElement, LinearScale, PointElement } from "chart.js";
 import { SalesChart } from "./SalesChart";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from 'gsap'
-import { MobileDrawer, MobileDrawer2 } from "./MobileDrawer";
+import { MobileDrawer2 } from "./MobileDrawer";
 import { showSoonToast } from "../utils/format";
 
 
+function sortByDate(order: OrderJSON[]) {
+    return order.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+}
 const Home = () => {
     const loader = useRef<HTMLDivElement>(null);
     const [_window, setWindowObject] = useState<Window>();
     const [isMobile, setIsMobile] = useState(false)
     const [darkTheme, setDarkTheme] = useState(false);
+
+    const [orderCount, setOrderCount] = useState(5)
 
     useEffect(() => {
         if (window && document) {
@@ -44,7 +48,8 @@ const Home = () => {
         setTimeout(() => {
             const el: HTMLDivElement = loader.current as HTMLDivElement;
             let anim = gsap.to(el, {
-                scale: 0,
+                scale: 0.4,
+                opacity: 0,
                 duration: 0.6
             })
             anim.eventCallback("onComplete", () => { el.style.display = "none" })
@@ -58,9 +63,13 @@ const Home = () => {
             document.documentElement.classList.remove('dark')
         }
     }, [darkTheme])
+
+    useEffect(() => {
+
+    }, [])
     return (
         <div className="w-full">
-            <div ref={loader} className="loading absolute top-0 left-0 w-full h-full flex items-center justify-center z-10 backdrop-blur-md bg-[#ddfed4aa]">
+            <div ref={loader} className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-10 backdrop-blur-md bg-neutral-400 bg-opacity-30 dark:bg-neutral-800">
                 <Image
                     src={"/stormsale.svg"}
                     alt={"StormSale"}
@@ -85,7 +94,7 @@ const Home = () => {
                     <SalesChart />
                 </Card>
                 <StatCards />
-                <Card title="Last Orders" className="grid-in-orders w-full">
+                <Card title="Last Orders" className="grid-in-orders w-full" rightAction={<button title="See All" className="btn btn-ghost !text-primary-green font-normal text-sm" onClick={() => setOrderCount(OrderData.length)}>See All</button>}>
                     <div className="no-scroll overflow-x-scroll">
                         <table className="table table-compact w-full">
                             <thead>
@@ -98,7 +107,7 @@ const Home = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {toOrderArray(OrderData).map((order, i) => (<Order order={order} key={i} />))}
+                                {toOrderArray(sortByDate(OrderData.slice(0, orderCount))).map((order, i) => (<Order order={order} key={i} />))}
                             </tbody>
                         </table>
                     </div>
@@ -115,12 +124,12 @@ const TopNav = () => (
         <h1 className="dark:text-white text-black">Dashboard</h1>
         <div className="flex gap-2 items-center">
             <div className="input flex flex-row items-center overflow-hidden rounded-full border-sm border-neutral-500">
-                <SearchNormal1 className=""/>
+                <SearchNormal1 className="" />
                 <input type="text" placeholder="Search..." className="search input !border-none !rounded-none h-full text-sm w-full max-w-sm" />
             </div>
-            <button className="hidden md:flex btn text-sm btn-ghost w-max flex-row gap-1 items-">
+            <button className="hidden md:flex btn text-sm btn-ghost w-max flex-row gap-1" onClick={() => showSoonToast()}>
                 <Calendar size={"1.2rem"} />
-                <p className="min-w-max text-xs">{new Date(Metadata.date).toDateString()}</p>
+                <p className="min-w-max text-xs">{new Date(sortByDate(OrderData)[0].date).toDateString()}</p>
             </button>
 
             <div className="popover">
@@ -142,27 +151,11 @@ const TopNav = () => (
 
             <div className="dropdown">
                 <ProfileBtn />
-                <button tabIndex={0} className="md:hidden popover-trigger btn btn-ghost border-2 btn-outline rounded-full p-2 min-w-[2.5rem] h-10">
-                    <User />
-                </button>
                 <div className="dropdown-menu bg-mid-green text-black dark:text-neutral-100">
-                    <div className="md:hidden flex gap-2 mb-4 px-2 py-2">
-                        <div className="avatar w-8 h-8">
-                            <Image
-                                src={"/stormsale.svg"}
-                                alt={"Avatar"}
-                                width={300}
-                                height={300} />
-                        </div>
-                        <div className="flex flex-col gap-1">
-                            <h2 className="text-sm text-dark dark:text-white">{Metadata.admin.name}</h2>
-                            <p className="text-xs">{Metadata.admin.email}</p>
-                        </div>
-                    </div>
-                    <Link href={"#"} className="dropdown-item text-sm">Account Settings</Link>
-                    <Link href={"#"} className="dropdown-item text-sm">Connected Accounts</Link>
-                    <Link href={"#"} className="dropdown-item text-sm">Help & Support</Link>
-                    <Link href={"#"} className="dropdown-item text-sm">Data Privacy</Link>
+                    <Link href={"#"} className="dropdown-item text-sm hover:bg-neutral-200 dark:hover::bg-neutral-600">Account Settings</Link>
+                    <Link href={"#"} className="dropdown-item text-sm hover:bg-neutral-200 dark:hover::bg-neutral-600">Connected Accounts</Link>
+                    <Link href={"#"} className="dropdown-item text-sm hover:bg-neutral-200 dark:hover::bg-neutral-600">Help & Support</Link>
+                    <Link href={"#"} className="dropdown-item text-sm hover:bg-neutral-200 dark:hover::bg-neutral-600">Data Privacy</Link>
                 </div>
             </div>
         </div>
@@ -214,7 +207,7 @@ const TopNavMobile: React.FC<{ dark: boolean, setDark: any }> = ({ dark, setDark
                         <button tabIndex={0} className="md:hidden popover-trigger btn btn-ghost border-2 btn-outline rounded-full p-2 min-w-[2.5rem] h-full">
                             <div className="avatar w-8 h-full">
                                 <Image
-                                    src={"/stormsale.svg"}
+                                    src={"https://i.pravatar.cc/150?img=3"}
                                     alt={"Avatar"}
                                     width={300}
                                     height={300}
@@ -222,6 +215,19 @@ const TopNavMobile: React.FC<{ dark: boolean, setDark: any }> = ({ dark, setDark
                             </div>
                         </button>
                         <div className="dropdown-menu bg-mid-green text-black dark:text-neutral-100">
+                            <div className="flex gap-2 mb-4 px-2 py-2 items0-center">
+                                <div className="avatar h-full">
+                                    <Image
+                                        src={"https://i.pravatar.cc/150?img=3"}
+                                        alt={"Avatar"}
+                                        width={300}
+                                        height={300} />
+                                </div>
+                                <div className="flex flex-col gap-1">
+                                    <h2 className="text-sm text-dark dark:text-white">{Metadata.admin.name}</h2>
+                                    <p className="text-xs">{Metadata.admin.email}</p>
+                                </div>
+                            </div>
                             <Link href={"#"} className="dropdown-item text-sm">Account Settings</Link>
                             <Link href={"#"} className="dropdown-item text-sm">Connected Accounts</Link>
                             <Link href={"#"} className="dropdown-item text-sm">Help & Support</Link>
@@ -236,11 +242,11 @@ const TopNavMobile: React.FC<{ dark: boolean, setDark: any }> = ({ dark, setDark
 }
 
 const ProfileBtn = () => (
-    <button className="hidden md:flex btn btn-ghost flex-row gap-2 pl-0 pr-2 py-2 max-w-max btn-rounded" tabIndex={0}>
+    <button className="hidden md:flex btn btn-ghost flex-row gap-2 popover-trigger pl-0 pr-2 py-2 max-w-max btn-rounded" tabIndex={0}>
         <div className="avatar avatar-ring p-1">
             <Image
-                src={"/stormsale.svg"}
-                alt={"Avatar"}
+                src={"https://i.pravatar.cc/150?img=3"}
+                alt={"user profile"}
                 width={300}
                 height={300}
                 className="h-full w-full" />

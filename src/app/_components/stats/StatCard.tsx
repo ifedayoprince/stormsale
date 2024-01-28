@@ -15,8 +15,9 @@ export interface StatCardProps {
 export const StatCard: React.FC<StatCardProps> = ({ name, data, icon, prefix }) => {
   const index = data.findLastIndex((pos) => pos > 0)
   const currentMonth = data[index] || 0
-  const previousMonth = data[(index - 1) || 0]
+  const previousMonth = data[index - 1] || 1;
   const percentage = (currentMonth / previousMonth)
+
 
   let outputPercent = parseFloat(((currentMonth > previousMonth)
     ? percentage * 100
@@ -26,7 +27,7 @@ export const StatCard: React.FC<StatCardProps> = ({ name, data, icon, prefix }) 
   if (Number.isNaN(percentage)) outputPercent = 0
 
   let option;
-  if (!(currentMonth > previousMonth)) {
+  if ((previousMonth != 1) && (!(currentMonth > previousMonth))) {
     option = getEchartOptions('#ED544E', undefined, prepareData(data))
   } else {
     option = getEchartOptions("#77B900", "'##66C87B'", prepareData(data))
@@ -34,7 +35,7 @@ export const StatCard: React.FC<StatCardProps> = ({ name, data, icon, prefix }) 
 
 
   return (
-    <div className="card p-3 flex gap-3 h-full w-full max-w-72 bg-white dark:bg-neutral-700 border border-border dark:border-neutral-600">
+    <div className="card p-3 flex gap-3 h-full w-full max-w-72 bg-white dark:bg-neutral-700 border border-border dark:border-neutral-600 hover:shadow-sm hover:shadow-primary-green hover:scale-105 transition-all">
       <div className="flex justify-between w-full items-center gap-2">
         <div className="p-2 rounded-full border dark:border-neutral-300 w-min">
           {icon}
@@ -42,7 +43,9 @@ export const StatCard: React.FC<StatCardProps> = ({ name, data, icon, prefix }) 
         <PercentChip
           trend={currentMonth > previousMonth
             ? "up"
-            : "down"
+            : previousMonth == 1
+              ? "up"
+              : "down"
           }
           value={outputPercent}
           showMobile
@@ -61,9 +64,11 @@ export const StatCard: React.FC<StatCardProps> = ({ name, data, icon, prefix }) 
         <PercentChip
           trend={currentMonth > previousMonth
             ? "up"
-            : "down"
+            : previousMonth == 1
+              ? "up"
+              : "down"
           }
-          value={outputPercent}
+          value={outputPercent == Infinity ? 0 : outputPercent}
           hide
         />
         <p className="text-neutral-500 dark:text-neutral-300 text-xs hidden md:block line-clamp-1">vs. previous month</p>
@@ -115,7 +120,7 @@ function getEchartOptions(color: string, border?: string, data?: number[][]) {
 export function prepareData(data: number[]): number[][] {
   let newData = [];
   let current = 0
-  for(let month of data) {
+  for (let month of data) {
     newData.push([current, month])
     current += 10
   }

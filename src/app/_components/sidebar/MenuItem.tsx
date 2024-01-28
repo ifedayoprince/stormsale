@@ -24,7 +24,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ href, icon, active, name }) 
                 </Link>
             </span>
         </li>
-        <li className={`menu-item relative md:hidden rounded-xl ${active ? "menu-active bg-neutral-400" : ""} w-full ${active ? activeStyle : ""}`} onClick={()=> {if(!active) showSoonToast()}}>
+        <li className={`menu-item relative md:hidden rounded-xl ${active ? "bg-neutral-200 dark:bg-neutral-700" : ""} hover:bg-neutral-200 dark:hover:bg-neutral-700 w-full ${active ? activeStyle : ""}`} onClick={()=> {if(!active) showSoonToast()}}>
             <Link href={href} className={`w-full py-2 flex gap-2 items-center text-neutral-400`}>
                 {icon}
                 <p className="">{name}</p>

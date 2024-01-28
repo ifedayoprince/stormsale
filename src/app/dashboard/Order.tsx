@@ -1,7 +1,7 @@
 import { DocumentDownload } from "iconsax-react";
 import { OrderStruct } from "../_models/Order";
 import { formatNumber } from "chart.js/helpers";
-import { formatThousand } from "../utils/format";
+import { formatThousand, showSoonToast } from "../utils/format";
 import Image from "next/image";
 
 export enum OrderStatus {
@@ -23,8 +23,7 @@ export const Order: React.FC<OrderProps> = ({ order }) => {
                         src={order.avatar}
                         alt={"user avatar"}
                         width={100}
-                        height={100}
-                        className="" />
+                        height={100} />
                     </div>
                     <p className="text-blue-primary dark:text-white">{order.name}</p>
                 </div>
@@ -37,7 +36,7 @@ export const Order: React.FC<OrderProps> = ({ order }) => {
             </td>
 
             <td>
-                <p className={order.status == OrderStatus.PAID ? "text-primary-green" : "text-alert-red"}>{order.status == OrderStatus.PAID
+                <p className={order.status == OrderStatus.PAID ? "text-primary-green" : "text-alert-red dark:text-[#f06a66]"}>{order.status == OrderStatus.PAID
                     ? "Paid"
                     : order.status == OrderStatus.UNPAID
                         ? "Unpaid"
@@ -46,10 +45,10 @@ export const Order: React.FC<OrderProps> = ({ order }) => {
             </td>
 
             <td>
-                <div className="flex gap-2 items-center text-secondaryBlue">
+                <button title="View Invoice" className="btn btn-sm flex gap-2 items-center bg-neutral-200 dark:bg-neutral-800 text-secondaryBlue" onClick={() => showSoonToast()}>
                     <DocumentDownload size={"1rem"} />
                     <p className="text-sm">View</p>
-                </div>
+                </button>
             </td>
         </tr>
     )

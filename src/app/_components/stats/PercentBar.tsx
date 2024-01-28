@@ -8,9 +8,9 @@ interface PercentBarProps {
 }
 
 export const PercentBar: React.FC<PercentBarProps> = ({ title, data, rank,max }) => {
-    console.log(`(progress)[${title}] ${data}, ${rank}`)
+    // console.log(`(progress)[${title}] ${data}, ${rank}`)
     return (
-        <div className="w-full flex flex-col gap-2">
+        <div className="w-full flex flex-col gap-2 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:scale-105 rounded-lg hover:p-2 transition-all">
             <h3 className="text-dark dark:text-neutral-200">{title}</h3>
             <progress className={`progress [&::-webkit-progress-bar]:bg-neutral-200 dark:[&::-webkit-progress-bar]:bg-neutral-800 w-full ${rank == 1
                 ? "[&::-webkit-progress-value]:bg-[#6160DC]"

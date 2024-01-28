@@ -42,7 +42,7 @@ const option = {
         },
     },
     grid: {
-        left: 40,
+        left: 45,
         right: 0,
         top: 20,
         bottom: 20,

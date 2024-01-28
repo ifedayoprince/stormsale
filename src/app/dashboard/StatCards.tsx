@@ -17,6 +17,8 @@ export const StatCards = () => {
             : month.reduce((a, b) => ({ ...a, amount: a.amount + b.amount })).amount
         return totalIncome / month.length;
     })
+
+    console.log(data)
     return (
         <Card className="grid-in-stats w-full" title={"Quick Stats"} hide noTitle rightAction={<></>}>
             <div className="grid grid-cols-2 grid-rows-2 gap-3 md:bg-transparent w-full h-full">

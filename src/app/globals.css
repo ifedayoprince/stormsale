@@ -46,7 +46,7 @@
 }
 
 div.Toastify__toast.toast-message {
-  @apply bg-neutral-700 w-[80vw] md:max-w-max text-white rounded-lg border-2 border-neutral-600 mt-4 ml-4;
+  @apply dark:bg-neutral-700 bg-neutral-100 w-[80vw] md:max-w-max dark:text-white text-black rounded-lg border-2 border-neutral-200 dark:border-neutral-600 mt-4 ml-4;
 }
 
 html > body {
@@ -64,4 +64,8 @@ html > body {
 }
 .select {
   @apply bg-white dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200
+}
+
+.text-table {
+  @apply !text-neutral-500 dark:!text-neutral-200;
 }
